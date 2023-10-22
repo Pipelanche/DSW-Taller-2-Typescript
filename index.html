@@ -4,34 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Series</title>
+    <title>TV Shows</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="icon" href="https://www.google.com/favicon.ico">
-    <style>
-        .serie-img {
-            width: 50px;
-            height: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <div class="container-fluid mt-5">
+        <div class="row justify-content-center" id="top-p"> 
+            <div class="col-sm-1">
+                <img src="./logo.png" id="logo-img" class="align-middle"> 
+            </div>
+            <div class="col-md-6">
+                <h1 class="align-middle"><strong>TV Series</strong></h1> 
+            </div>
+        </div>
+    </div>
     <div class="container mt-5">
-        <h1>Series de TV</h1>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Imagen</th>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Canal</th>
-                    <th>Temporadas</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Creación de datos en main.ts -->
-            </tbody>
-        </table>
+        <div class="row justify-content-center"> 
+            <div class="col-md-10">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Channel</th>
+                            <th>Seasons</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Creación de datos en main.ts -->
+                    </tbody>
+                </table>
+                <div id="average-text"></div> 
+            </div>
+            </div>
+        </div>
     </div>
     <script type="module" src="main.js"></script>
 </body>

@@ -24,21 +24,30 @@
     <div class="container mt-5">
         <div class="row justify-content-center"> 
             <div class="col-md-10">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Channel</th>
-                            <th>Seasons</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Creación de datos en main.ts -->
-                    </tbody>
-                </table>
-                <div id="average-text"></div> 
-            </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Channel</th>
+                                <th>Seasons</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Creación de datos en main.ts -->
+                        </tbody>
+                    </table>
+                    <div id="average-text"></div> 
+                    <div class="col-md-6">
+                        <div id="serie-detail" class="card" style="display:none;">
+                            <img class="card-img-top" id="serie-image" src="#" alt="Serie Image">
+                            <div class="card-body">
+                                <h5 class="card-title" id="serie-name"></h5>
+                                <p class="card-text" id="serie-description"></p>
+                                <a href="#" id="serie-link" class="btn btn-primary" target="_blank">View More</a>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>

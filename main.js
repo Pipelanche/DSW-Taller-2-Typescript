@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (tbody) {
         series.forEach(function (serie) {
             var row = document.createElement("tr");
+            row.addEventListener('click', function () { return showSerieDetail(serie); });
             var idCell = document.createElement("td");
             idCell.textContent = serie.id.toString();
             row.appendChild(idCell);
@@ -27,5 +28,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     else {
         console.error("No se encontró el elemento tbody");
+    }
+    function showSerieDetail(serie) {
+        var detailCard = document.getElementById("serie-detail");
+        var serieImage = document.getElementById("serie-image");
+        var serieName = document.getElementById("serie-name");
+        var serieDescription = document.getElementById("serie-description");
+        var serieLink = document.getElementById("serie-link");
+        if (detailCard && serieImage && serieName && serieDescription && serieLink) {
+            serieImage.src = serie.imageUrl;
+            serieName.textContent = serie.name;
+            serieDescription.textContent = serie.description;
+            serieLink.href = serie.link;
+            detailCard.style.display = "block";
+        }
     }
 });

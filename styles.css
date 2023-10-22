@@ -60,7 +60,7 @@ table tr:last-child td {
 }
 
 #average-text {
-    margin-top: 15px;
+    margin: 15px;
 }
 #logo-img {
     max-width: 100px;

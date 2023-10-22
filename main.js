@@ -10,7 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
             idCell.textContent = serie.id.toString();
             row.appendChild(idCell);
             var nameCell = document.createElement("td");
-            nameCell.textContent = serie.name;
+            var nameLink = document.createElement("a");
+            nameLink.href = "#";
+            nameLink.textContent = serie.name;
+            nameLink.addEventListener('click', function (event) {
+                event.preventDefault();
+                showSerieDetail(serie);
+            });
+            nameCell.appendChild(nameLink);
             row.appendChild(nameCell);
             var channelCell = document.createElement("td");
             channelCell.textContent = serie.channel;

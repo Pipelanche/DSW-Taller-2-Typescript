@@ -14,9 +14,16 @@ document.addEventListener("DOMContentLoaded", function() {
             const idCell = document.createElement("td");
             idCell.textContent = serie.id.toString();
             row.appendChild(idCell);
-            
+
             const nameCell = document.createElement("td");
-            nameCell.textContent = serie.name;
+            const nameLink = document.createElement("a");
+            nameLink.href = "#";
+            nameLink.textContent = serie.name;
+            nameLink.addEventListener('click', (event) => {
+                event.preventDefault();  
+                showSerieDetail(serie);
+            });
+            nameCell.appendChild(nameLink);
             row.appendChild(nameCell);
             
             const channelCell = document.createElement("td");
